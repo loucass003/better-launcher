@@ -14,6 +14,22 @@
 				<v-icon>close</v-icon>
 			</v-btn>
 		</v-system-bar>
+		<v-snackbar
+			v-model="snackbar"
+			left
+			multi-line
+			timeout="3000"
+			top
+		>
+			{{ text }}
+			<v-btn
+				color="pink"
+				flat
+				@click="snackbar = false"
+			>
+				Close
+			</v-btn>
+		</v-snackbar>
 		<v-slide-y-transition mode="out-in">
 			<auth-layout v-if="!isAuth"></auth-layout>
 			<layout v-else></layout>
