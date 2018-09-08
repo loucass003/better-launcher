@@ -1,3 +1,4 @@
+import fs from 'fs'
 import { app, BrowserWindow } from 'electron'
 
 /**
@@ -14,6 +15,7 @@ const winURL = process.env.NODE_ENV === 'development'
   : `file://${__dirname}/index.html`
 
 function createWindow () {
+  
   /**
    * Initial window options
    */

@@ -3,7 +3,8 @@ import axios from 'axios'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.css'
 
-import './utils'
+
+
 import App from './App'
 import router from './router'
 import { store } from './store'

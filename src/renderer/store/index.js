@@ -8,6 +8,16 @@ import { LAUNCHER_HOME } from '../utils'
 
 Vue.use(Vuex)
 
+import fs from 'fs'
+/**
+ * Init Filesystem
+ */
+console.log
+if (!fs.existsSync(LAUNCHER_HOME)) {
+  fs.mkdirSync(LAUNCHER_HOME)
+  console.log("Create default folder")
+}
+
 const adapter = new FileSync(path.join(LAUNCHER_HOME, 'data.db'))
 const db = LowDb(adapter);
 
