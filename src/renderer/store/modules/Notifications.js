@@ -25,8 +25,15 @@ const actions = {
     }
 }
 
+const getters = {
+    notification: ({ notification }) => {
+        return notification;
+    }
+}
+
 export {
     store,
     mutations,
-    actions
+    actions,
+    getters
 }

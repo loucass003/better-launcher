@@ -15,13 +15,13 @@
 			</v-btn>
 		</v-system-bar>
 		<v-snackbar
-			v-model="snackbar"
+			v-model="notification.display"
 			left
 			multi-line
-			timeout="3000"
+			:timeout="notification.timeout"
 			top
 		>
-			{{ text }}
+			{{ notification.message }}
 			<v-btn
 				color="pink"
 				flat
@@ -52,6 +52,7 @@ export default {
 	computed: {
 		...mapGetters({
 			selected: 'session/selected',
+			notification: 'notifications/notification'
 		}),
 		isAuth() {
 			/*const needAuth = !this.$route.path.startsWith('/auth/');
